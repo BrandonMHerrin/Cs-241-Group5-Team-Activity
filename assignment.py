@@ -1,0 +1,24 @@
+from date import Date
+
+class Assignment:
+    def __init__(self):
+        self.name = 'Untitled'
+        self.start_date = Date()
+        self.due_date = Date()
+        self.end_date = Date()
+    def prompt(self):
+        self.name = str(input('Name: '))
+        print('\nStart Date:')
+        self.start_date.prompt()
+        print('\nDue Date:')
+        self.due_date.prompt()
+        print('\nEnd Date:')
+        self.end_date.prompt()
+    def display(self):
+        print(f'\nAssignment: {self.name}')
+        print('Start Date:')
+        self.start_date.long_display()
+        print('Due Date:')
+        self.due_date.long_display()
+        print('End Date:')
+        self.end_date.long_display()
